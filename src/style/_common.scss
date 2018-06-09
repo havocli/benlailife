@@ -1,0 +1,818 @@
+body,div,p,ul,ol,li,dl,dt,dd,form,h1,h2,h3,h4,h5,h6,table,tr,td,hr,fieldset,img,input,textarea{
+	margin:0;
+	padding:0;
+	}
+a{
+	text-decoration:none;
+	cursor: pointer;
+	color: #333;
+}
+body{
+		font-family:"微软雅黑",Arial;
+		font-size:12px;
+		color: #333;
+
+		
+	}
+
+ul,ol{
+		list-style:none;
+	}
+img{
+	vertical-align: middle;
+}
+
+//top
+.top_basic{
+	background:url(../../icon/top.gif) no-repeat #fff ;
+}
+.top{
+	bottom: 10px;
+    right: 0;
+    width: 61px;
+    position: fixed;
+    z-index: 30;
+    #go_top{
+    	display: none;
+		@extend .top_basic;
+	    width: 44px;
+	    height: 30px;
+	    background-position: -43px -43px;	
+	    cursor: pointer;
+	    border: 1px solid #ccc;
+	    float: left;
+	    overflow: hidden;
+	    padding: 5px;
+	    margin-left: 11px;	
+	    &:hover{
+	    	background-position: -43px 8px;
+	    }
+    }
+    .top_active{
+    	display: block;
+    }
+    #car_right{
+    	background: url(../../icon/car_right.gif) no-repeat;
+	    width: 46px;
+	    height: 70px;
+	    float: left;
+	    overflow: hidden;
+	    margin-top: 10px;
+	    padding: 0 0 0 15px;
+	    text-align: center;
+	    font: 400 12px/38px "Microsoft YaHei";
+	    color: #fff;
+    }
+    #client_service{
+    	background: url(../../icon/client_service.gif) 0 0 no-repeat;
+	    height: 70px;
+	    width: 50px;
+	    margin-top: 10px;
+	    display: block;
+	    float: left;
+	    overflow: hidden;
+	    margin-left: 11px;
+	    &:hover{
+	    	background-position: -60px 0;
+	    	
+	    }
+    }
+    #code_list{
+    	@extend .top_basic;
+	    background-position: -96px -46px;
+	    height: 38px;
+	    width: 44px;
+	    margin-top: 10px;
+        cursor: pointer;
+	    border: 1px solid #ccc;
+	    float: left;
+	    overflow: hidden;
+	    padding: 5px;
+	    margin-left: 11px;
+	    &:hover{
+    	    background-position: -96px 5px;
+	    }
+    }
+}
+
+
+.pop_code{
+	display: none;
+	bottom: 14px;
+    right: 55px;
+    position: fixed;
+    z-index: 30;
+    .pop_code1{
+    	padding:7px;
+    	text-align: center;
+    	background: #fff;
+	    box-shadow: rgba(34,25,25,.1) 0 0 1px;
+	    float:left;
+	    margin-right: 5px;
+
+	    img{
+	    	width:186px;
+	    	height:186px;
+	    }
+	    span{
+    	    display: block;
+		    font-size: 14px;
+		    margin-top: 6px;
+	    }
+    }
+    .pop_code2,.pop_code3{
+		@extend .pop_code1;
+    }
+}
+
+.pop_active{
+	display: block;
+}
+
+// head
+
+.head_top_w{
+	background: #fcfcfc;
+	border-bottom: 1px solid #e5e5e5;
+
+}
+.head_top{
+	width:1200px;
+	height: 30px;
+	margin: 0 auto;
+	position: relative;
+	font-size: 12px;
+
+	.head_t1{
+		color: #3e4141;
+    	line-height: 30px;
+    	float: left;
+    	margin-right: 20px;
+    	a{
+    		color: #ff6900;
+    		margin: 0 0 0 5px;
+    		&:hover{
+			text-decoration: underline;
+				}
+			}
+    	}
+    }
+.head_top .head_t2{
+
+    	float:left;
+    	line-height: 30px;
+    	padding-left: 34px;
+    	background: url(../../icon/head-car.jpg) no-repeat left center;
+    	a{
+    		display: block;
+    		color:#3e4141;
+    		width:79px;
+    		border:1px solid #eeeee6;
+    		line-height: 22px;
+    		padding-left:6px;
+    		margin-top: 3px;
+    		background: url(../../icon/head-tri.jpg)no-repeat 70px center;
+			background-color: white;
+			
+    	}
+
+    }
+.head_top .head_t3 {
+	float:right;
+	li{
+		width: 76px;
+		float:left;
+		position: relative;
+		z-index: 6;
+		padding-left: 1px;
+		background: url(../../icon/head-line.jpg) no-repeat left center;
+		a{
+			text-align: center;
+			display: block;
+			line-height: 30px;
+			color:#3d4142;
+		}
+	}
+	.head_phone{
+		width:100px;
+		
+		a{
+			background: url(../../icon/head-tri.jpg) no-repeat 82px center;
+			text-align: left;
+			img{
+			margin:{
+				left:11px;
+				right:6px;
+				}
+			}
+		}
+		.head_code{
+			background-color: white;
+			position: absolute;
+			z-index:2;
+			display: none;
+			top:30px;
+			left:0px;
+			width:100px;
+			text-align: center;
+			box-shadow: 1px 1px 3px rgba(192,192,192,.5);
+			border-left: 1px solid #e8e8e8;
+    		border-right: 1px solid #e8e8e8;
+   			border-bottom: 1px solid #e8e8e8;
+			img{
+				width:95px;
+				margin-top: 15px;
+			}
+			p{
+				color: #3e4141;
+    			line-height: 40px;
+    			text-align: center;
+
+			}
+		}
+
+		&:hover{
+			.head_code{
+				display:block;
+			}
+			a{
+				background-color:#fff;
+				box-shadow: 1px 1px 6px rgba(192,192,192,.5);
+				background-image:url(../../icon/head-tri2.jpg);
+			}
+		}
+
+
+	}
+	.head_client{
+		width: 87px;
+		dt{
+			padding-right: 1px;
+			background:url(../../icon/head-line.jpg) no-repeat right center;
+			a{
+				background: url(../../icon/head-tri.jpg) no-repeat 66px center;
+				text-indent:-10px;
+			}
+		}
+		dd{
+			position: absolute;
+			width: 79px;
+		    top: 30px;
+		    left: 0px;
+		    padding: 0 4px 7px;
+		    background-color: #fff;
+		    box-shadow: 1px 1px 3px rgba(192,192,192,.5);
+		    display: none; 
+		    border-left: 1px solid #e8e8e8;
+		    border-right: 1px solid #e8e8e8;
+		    border-bottom: 1px solid #e8e8e8;
+		    z-index:2;
+		    a:hover{
+		    	color:#ff6900;
+		    	text-decoration: underline;
+		    }
+		}
+
+		dl:hover{
+			dd{
+				display:block;
+			}
+			dt{
+				box-shadow: 1px 1px 3px rgba(192,192,192,.5);
+				background:#fff;
+				a{
+					background: url(../../icon/head-tri2.jpg) no-repeat 66px center;
+				}
+			}
+		}
+	}
+
+}
+
+.head_center_w{
+	width: 1200px;
+	margin:0 auto;
+	
+}
+.head_center{
+	float: left;
+	padding: 10px 0 20px;
+	width: 100%;
+	.logo{
+		float: left;
+	}
+	
+	.search_box{
+		float:left;
+		margin-left:63px;
+		.search_word{
+			overflow:hidden;
+			a{
+				margin: 0 25px 0 0;
+    			float: left;
+    			color:#8c8c8c;
+    			line-height:30px;
+				&:hover{
+    				color: #ff6900;
+    				text-decoration:underline;
+				}
+			}
+		}
+
+		.search_btn{
+			border:3px solid #91be16;
+			font-size:0;
+			input{
+				border:none;
+				height:35px;
+				width:367px;
+				vertical-align:middle;
+				outline:none;
+				padding:0 10px;
+			}
+		}
+		
+	}
+
+	.option_car{
+		padding-left:45px;
+		float: left;
+		padding-top:30px;
+		.my_option{
+			float:left;
+			position:relative;
+			margin-right:20px;
+			    z-index: 5;
+
+			dt{
+				position:relative;
+				z-index:1;
+				a{
+				display:block;
+				line-height:40px;
+				width:103px;
+				padding-right:20px;
+				border:1px solid #e5e5e5;
+				color:#3d4140;
+				text-align:center;
+				background:url(../../icon/head-tri.jpg) no-repeat 103px center;
+				background-color:#f8f8f6;
+					img{
+						// padding-left:11px;
+						padding-right:8px;
+
+					}
+				}
+			}
+			dd{
+			    border: 1px solid #e5e5e5;
+			    background-color: #fff;
+			    box-shadow: 1px 1px 3px rgba(192,192,192,.5);
+			    padding: 0 15px;
+			    position: absolute;
+			    top: 41px;
+			    right: 0;
+			    width: 288px;
+			    display: none;
+			    .login{
+			    	border-bottom:1px solid #e8e8e8;
+			    	padding-left:15px;
+			    	line-height:48px;
+			    	color:#3e4141;
+			    	font-weight:bold;
+			    	font-size:14px;
+			    	a{
+						color: #ff6900;
+    					margin: 0 5px;
+    					&:hover{
+    						text-decoration:underline;
+    					}
+			    	}
+			    }
+
+			    ul{
+			    	padding: 5px 15px 10px;
+			    	overflow:hidden;
+			    	.myleft{
+			    		float:left;
+			    		a{	
+			    			display:block;
+			    			width:160px;
+			    			color:#3e4141;
+			    			line-height:34px;
+			    			font-size:14px;
+							&:hover{
+    							text-decoration:underline;
+    							color:#ff6900;
+    						}
+			    		}
+			    	}
+			    	.myright{
+			    		float:right;
+			    		width:98px;
+			    		a{
+			    			display:block;
+			    			width:160px;
+			    			color:#3e4141;
+			    			line-height:34px;
+			    			font-size:14px;
+			    			&:hover{
+    							text-decoration:underline;
+    							color:#ff6900;
+    						}
+			    		}
+			    	}
+			    }
+			}
+
+			&:hover{
+				dd{
+					display:block;
+				}
+				dt{
+					a{
+						background-color:#fff;
+						border-bottom-color:#fff;
+
+					}
+				}
+			}
+		}
+
+
+
+		.my_car{
+			float:left;
+			position:relative;
+			    z-index: 5;
+
+			dt{
+				position:relative;
+				z-index:1;
+				.carcount{
+					height:23px;
+					width:37px;
+					background:url(../../icon/car_count.png) no-repeat center;
+					position:absolute;
+					left:21px;
+					top:-16px;
+					font-size:14px;
+					color:#fff;
+					text-align:center;
+				}
+				
+				a{
+				display:block;
+				line-height:40px;
+				width:103px;
+				padding-right:20px;
+				border:1px solid #e5e5e5;
+				color:#3d4140;
+				text-align:center;
+				background:url(../../icon/head-tri.jpg) no-repeat 103px center;
+				background-color:#f8f8f6;
+					img{
+						// padding-left:11px;
+						padding-right:8px;
+
+					}
+				}
+
+			}
+			dd{
+			    border: 1px solid #e5e5e5;
+			    background-color: #fff;
+			    box-shadow: 1px 1px 6px rgba(192,192,192,.5);
+			    padding: 0 15px 18px;
+			    position: absolute;
+			    top: 41px;
+			    right: 0;
+			    width: 333px;
+			    display: none;
+
+			    .car_info{
+		    	    text-align: center;
+					padding: 28px 0 10px;
+		    		color:#3e4141;
+			    }
+			}
+			&:hover{
+				dd{
+					display:block;
+				}
+				dt{
+					a{
+						background-color:#fff;
+						border-bottom-color:#fff;
+
+					}
+				}
+			}
+		}
+	}
+}
+
+.head_bottom_w{
+	background:#8ab700;
+	height:44px;
+	clear:both;
+	.head_bottom{
+		width:1200px;
+		margin:0 auto;
+		.head_b_menu{
+			position: relative;
+			float:left;
+			&:hover{
+				.head_b_menuL{
+					display: block;
+				}
+			}
+			dt{
+				a{
+				display:block;
+				width:210px;
+				text-align:center;
+				line-height:44px;
+				color:#fff;
+				font-size:18px;
+					img{
+						padding-left:15px;
+
+					}
+				}
+			}
+			
+			dd{	
+				position: absolute;
+			    top: 44px;
+			    left: 0;
+			    z-index:2;
+				.head_b_menuL{
+				display: none;
+
+					border: 2px solid #91be16;
+					border-right:none;
+				   
+				    height: 396px;
+				    width: 208px;
+				    background-color: #fff;
+				    // display: none;
+				    ul{
+				    	li:last-child{
+				    		padding-bottom: 0px;
+				    		padding-top: 0px;
+				    	}
+				    	li{
+				    		height: 31px;
+						    line-height: 31px;
+						    width: 156px;
+						    color: #4c4c4c;
+					        padding: 1px 0 1px 50px;
+						    border-right:2px solid #91be16;
+						    text-overflow: clip;
+						    display: block;
+						    overflow: hidden;
+						    a{
+						    	color: #4c4c4c;
+	    						line-height: 31px;
+						    }
+						    &:after{
+						    	content: "";
+							    background: url(../../icon/head_right.png) 0 0 no-repeat;
+							    display: block;
+							    width: 6px;
+							    height: 12px;
+							    float: right;
+							    margin: 12px 12px 0 0;
+						    }
+				    	}
+				    	.active{
+				    		border:2px solid #91be16;
+				    		border-right:none;
+				    	}
+				    	@for $i from 1 through 12{
+				    		.head_li-#{$i}{
+				    			background:url(../../icon/icon-#{$i}.png) no-repeat 7% center;
+				    		}
+				    	}
+				    }
+				}
+
+				.head_b_menuR{
+				    ul{
+				    	border: 2px solid #8ab700;
+						border-left:none;
+					    background-color: #fff;
+					    background: rgba(255,255,255,.97);
+					    position: absolute;
+					    top: 0px;
+					    left: 210px;
+					    width: 600px;
+					    height: 381px;
+					    min-height: 380px;
+					    padding: 15px 15px 0 0;
+					    display: none;
+					    z-index: 2;
+				    	li{	
+				    		float:left;
+				    		.menu_list_l{
+			    			    width: 90px;
+							    float: left;
+							    text-align: right;
+							    font-weight: 700;
+								margin: 0 0 17px;
+
+							    a{
+							    	color:#688529;
+							    	&:hover{
+								    	color: #eb6100;
+	    								text-decoration: underline;
+								    }
+							    }
+
+				    		}
+				    		.menu_list_r{
+			    			    width: 495px;
+	   							float: right;
+	   							
+	   							a{
+	   								padding: 0 15px;
+								    border-right: 1px solid #4c4c4c;
+								    float: left;
+								    margin: 0 0 17px;
+								    color:#666;
+								    &:hover{
+								    	color: #eb6100;
+	    								text-decoration: underline;
+								    }
+								    &:last-child{
+	   								border-right:none;
+	   								}
+
+	   							}
+	   							
+				    		}
+				    	}
+				    }
+				    .focusR{
+				    	display: block;
+				    }
+				}
+			}
+			
+		}
+
+		.head_b_nav{
+			margin:2px 0;
+			float: left;
+			a{
+				float:left;
+				padding:0 25px;
+				text-align:center;
+				line-height:40px;
+				color:#fff;
+				font-size:18px;
+				&:hover{
+					background-color:#79a000;
+				}
+			}
+		}
+	}
+}
+
+
+.nav{
+	width: 1200px;
+	line-height:40px;
+	margin:0 auto;
+	font-size: 12px;
+	color: #959595;
+	a{
+		font-size: 12px;
+		color: #959595;
+		line-height:40px;
+		&:hover{
+			color: #ff6800;
+			text-decoration: underline;
+		}
+	}
+}
+
+
+.intro{
+	background: #f8f8f6;
+	height:120px;
+	ul{
+		overflow: hidden;
+		padding:40px 0;
+		@for $i from 1 through 5{
+			.intro_li_#{$i}{
+				background:url(../../icon/icon#{$i}.jpg) no-repeat 45px center;
+			}
+		}
+		li{
+			float: left;
+			padding-left:85px;
+			width: 20%;
+			box-sizing:border-box;
+			dl{
+				padding-left: 14px;
+				border-left: 1px solid #aeaeac;
+				dt{
+					font-size: 20px;
+					line-height: 22px;
+					color: #91b531;
+					
+				}
+				dd{
+					font-size: 12px;
+					color: #676664;
+				}
+			}
+		}
+	}
+}
+
+.service{
+	width: 920px;
+    padding: 20px 0 20px 70px;
+    height: 160px;
+    border-top: 0;
+    margin: 0 auto;
+    dl{
+	    font-size: 12px;
+	    color: #333;
+	    float: left;
+	    width: 230px;
+	    height: 160px;
+	    @for $i from 1 through 4{
+	    	.service-#{$i}{
+		   		background: url(../../icon/service-#{$i}.jpg) no-repeat left center;
+	    	}
+	    }
+	    dt{
+	    	font: 700 14px/26px "微软雅黑";
+		    height: 26px;
+		    margin-bottom: 10px;
+		    color: #666;
+		    padding-left: 35px;
+	    }
+	    dd{
+	    	line-height: 25px;
+		    margin-left: 10px;
+		    padding-left: 25px;
+		    border-left: 1px dotted #ccc;
+		    a{
+		    	color: #666;
+				&:hover{
+			    	color: #ff6900;
+			    	text-decoration: underline;
+		    	}
+		    }
+	    }
+    }
+}
+
+.foot{
+	width:1200px;
+	margin:0 auto;
+	text-align: center;
+	h6{
+		img{
+			margin-bottom: 3px;
+			margin-right: 5px;
+
+		}
+		line-height: 30px;
+		color: #666;
+		font-size: 14px;
+	}
+	.method{
+		display: table;
+		margin: 0 auto;
+		padding:6px 0;
+		a{
+			float: left;
+			color: #666;
+			padding: 0 10px;
+		    border-right: 1px solid #666;
+		    line-height: 12px;
+		    &:hover{
+		    	color: #ff6900;
+		    	text-decoration: underline;
+		    }
+		}
+
+	}
+	.m1{
+		background: url(../../icon/police.png) no-repeat left center;
+		a{
+			text-indent: 10px;
+		}
+	}
+	p{
+		line-height: 24px;
+		font-size:12px;
+		color: #666;
+	}
+}

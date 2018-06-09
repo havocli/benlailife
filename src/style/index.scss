@@ -1,0 +1,504 @@
+@import 'common';
+
+.head_bottom_w .head_bottom .head_b_menu dd .head_b_menuL{
+	display: block;
+}
+.banner{
+	height:400px;
+	position: relative;
+	z-index: 0;
+	overflow: hidden;
+
+	.bg{
+		
+		li{
+			position: absolute;
+			left:0;
+			top:0;
+			height:400px;
+			width:100%;
+			display: none;
+			a{
+				float:left;
+				height:400px;
+				width:100%;
+				cursor: pointer;
+			}
+		}
+		.bg_active{
+			display: block;
+		}
+
+		@for $i from 1 through 6{
+			.bl-#{$i} a{
+				background:url(../../img/banner-#{$i}.jpg)no-repeat center top;
+			}
+			// .bl-#{$i}{
+			// 	z-index: 6-$i;
+			// }
+		}
+	}
+	.direction{
+		display: none;
+		.btnL{
+			background: rgba(255,255,255,.9);
+			color:#ccc;
+			font-size: 25px;
+			line-height: 50px;
+			text-align: center;
+			width:25px;
+			position: absolute;
+			z-index: 10;
+			left:240px;
+			top:45%;
+			&:hover{
+				background: #fff;
+			}
+		}
+		.btnR{
+			background: rgba(255,255,255,.6);
+			color:#ccc;
+			font-size: 25px;
+			line-height: 50px;
+			text-align: center;
+			width:25px;
+			position: absolute;
+			right:30px;
+			z-index: 10;
+			top:45%;
+			&:hover{
+				background: #fff;
+			}
+		}
+		a{
+			color:gray;
+		}
+	}
+	.bullet{
+		position: absolute;
+	    top: 396px;
+	    left: 242px;
+	    height: 30px;
+	    width: 990px;
+	    overflow: hidden;
+	    transition: all .4s linear;
+	    li{
+	    	width: 163px;
+		    margin-left: 2px;
+		    float: left;
+		    a{
+		    	width: 143px;
+			    height: 30px;
+			    display: block;
+			    background-color: #a2a293;
+			    background: rgba(162,162,147,.78);
+			    transition: all .2s linear;
+			    line-height: 30px;
+			    padding: 0 10px;
+			    font: 400 14px/30px "Microsoft YaHei";
+			    color: #626252;
+			    text-decoration: none;
+			    text-overflow: clip;
+			    display: block;
+			    overflow: hidden;
+			    text-align: center;
+
+		    }
+	    }
+	    .bullet_active{
+	    	a{
+		    	background-color: #96bf17;
+			    background: rgba(150,191,23,.75);
+			    color: #fff;
+	    	}
+	    }
+	}
+}
+
+.banner_info{
+	width:1200px;
+	margin:0 auto 20px;
+	cursor:pointer;
+}
+
+.new{
+	width: 1200px;
+    height: 266px;
+    margin:0 auto 20px;
+	position: relative;
+	
+	.new_left{
+		background-color: #f8f8f6;
+
+	    border: 1px solid #c2d58f;
+	    width: 123px;
+	    height: 264px;
+	    float: left;
+	    li{
+	    	a{
+	    		font-size:16px;
+	    		line-height: 44px;
+	    		text-align: center;
+			    color: #626252;
+			    display: block;
+			    height: 44px;
+			    width: 123px;
+			    border-bottom: 1px solid #e5e5e5;
+			    border-top: 1px solid transparent;
+			   
+	    	}
+	    	.new_active{
+		    	    color: #78a000;
+				    background-color: #fff;
+				    border-bottom: 1px solid #c2d58f;
+				    border-left: 4px solid #91be16;
+				    width: 116px;
+				    padding-right: 4px;
+			}
+	    }
+	}
+	
+	.new_right{
+		.new_focus{
+			display: block;
+		}
+		ul{
+		    border-top: 1px solid #c2d58f;
+		    border-bottom: 1px solid #c2d58f;
+		    width: 1062px;
+		    height: 264px;
+		    float: left;
+		    display: none;
+		    
+		    li{
+		    	width: 176px;
+			    float: left;
+			    height: 264px;
+			    border-right: 1px solid #eee;
+			    background-color: #fff;
+			    overflow: hidden;
+			    position: relative;
+			    .new_box{
+			    	border: 4px solid #fff;
+				    width: 140px;
+				    height: 256px;
+				    padding: 0 14px;
+				    position: relative;
+				    transition: all .2s linear;
+				    .pic{
+				    	margin-top: 15px;
+		    			transition: all .2s linear;
+				    }
+				    .name{
+				    	height: 38px;
+					    width: 140px;
+					    text-overflow: clip;
+					    overflow: hidden;
+					    margin-top: 15px;
+					    transition: all .2s linear;
+					    a{
+					    	em{
+					    		font-style:normal;
+					    		height: 19px;
+							    text-overflow: clip;
+							    display: block;
+							    overflow: hidden;
+					    		color: #3e4141;
+					    	}
+					    	span{
+					    		font-size: 12px;
+				    		    color: #898989;
+					    	}
+					    	&:hover{
+					    		text-decoration: underline;
+					    		color:#ff6801;
+					    		em{
+					    			color:#ff6801;
+					    		}
+					    		span{
+					    			color:#ff6801;
+					    		}
+					    	}
+					    }
+				    }
+				    .price{
+				    	font: 400 17px/25px "Microsoft YaHei";
+					    color: #ff6900;
+					    margin-top: 7px;
+					    transition: all .2s linear;
+					    span{
+				    	    font: 400 12px/25px "Microsoft YaHei";
+						    color: #686c69;
+						    text-decoration: line-through;
+					    }
+				    }
+				    .btn{
+				    	position: absolute;
+					    top: 260px;
+					    left: 0;
+					    transition: all .2s linear;
+					    a{
+					    	background: url(../../icon/addcar.jpg) no-repeat center;
+					    	display: block;
+					    	width: 168px;
+							height: 33px;
+					    }
+				    }
+		    		&:hover{
+				    	border-color: #f8f8f6;
+				    	.pic{
+				    		margin-top: 7px;
+				    	}
+				    	.name{
+				    		margin-top: 7px;
+				    	}
+				    	.price{
+				    		margin-top: 7px;
+				    	}
+				    	.btn{
+				    		top:227px;
+				    	}
+		   			}
+	    		}
+			    
+	    	}
+		}
+	}
+}
+
+.product{
+	width: 1200px;
+	margin:0 auto 20px;
+	.insert{
+		margin-bottom: 10px;
+	}
+	.pro_tit{
+		height:47px;
+		background: #f8f8f6;
+		border-bottom: 1px solid #92b678;
+		.pro_tit_l{
+			padding-left: 18px;
+			width:314px;
+			float: left;
+			img{
+				padding-top:8px;
+				padding-right: 13px;
+				float: left;
+			}
+			a{
+				float:left;
+				line-height: 47px;
+				font-size: 16px;
+				color: #636152;
+			}
+		}
+		ul{
+			li:last-child{
+				a{
+					background-image: url(../../icon/pro_line.jpg);
+					background-position:right center;
+					background-repeat: no-repeat ;
+
+				}
+			}
+			li{
+				float:left;
+				background: url(../../icon/pro_line.jpg) no-repeat left center;
+				a{
+					width:124px;
+					line-height:42px;
+					border: {
+						top:5px solid transparent;
+						left:1px solid transparent;
+						right:1px solid transparent;
+					}
+					color:#616250;
+					text-align: center;
+					display: block;
+					font-size: 14px;
+	
+				}
+				.pro_active{
+					border-top-color: #8fbe16;
+					border-left-color: #92b678;
+					border-right-color: #92b678;
+					height:43px;
+					background-color: #fff;
+					font-size: 16px;
+					color:#8fbe16;
+					background-image:none;
+				}
+			}
+			
+		}
+	}
+
+	.pro_body{
+		overflow: hidden;
+		.pro_body_l{
+			width:313px;
+			border: 1px solid #eeeeee;
+			border-top:none; 
+			float:left;
+			img{
+				border-bottom: 1px solid #eeeeee;
+			}
+			.pro_body_intro{
+				padding:7px 0px 7px 30px;
+				overflow: hidden;
+				background: #fbfbfb;
+				.table_1{
+					padding-bottom: 10px;
+					overflow: hidden;
+				}
+				a{
+					float:left;
+					width:50px;
+					height:50px;
+					border:1px solid #a6ca44;
+					border-radius: 10px;
+					background: #fff;
+					text-align: center;
+					font-size: 16px;
+					color:#a6ca44;
+					margin-right:15px;
+					span{
+						display: block;
+						line-height: 25px;
+					}
+					&:hover{
+						background: #a6ca44;
+						color: #fff;
+					}
+					
+				}
+			}
+		}
+
+		.pro_body_r{
+			float: left;
+			.pro_focus{
+				display: block;
+			}
+			ul{
+		    border-bottom: 1px solid #eee;
+		    width: 885px;
+		    height: 264px;
+		    float: left;
+		    display: none;
+		    li{
+		    	width: 176px;
+			    float: left;
+			    height: 264px;
+			    border-right: 1px solid #eee;
+			    background-color: #fff;
+			    overflow: hidden;
+			    position: relative;
+			    border-bottom: 1px solid #eee;
+			    .new_box{
+			    	border: 4px solid #fff;
+				    width: 140px;
+				    height: 256px;
+				    padding: 0 14px;
+				    position: relative;
+				    transition: all .2s linear;
+				    .pic{
+				    	margin-top: 15px;
+		    			transition: all .2s linear;
+				    }
+				    .name{
+				    	height: 38px;
+					    width: 140px;
+					    text-overflow: clip;
+					    overflow: hidden;
+					    margin-top: 15px;
+					    transition: all .2s linear;
+					    a{
+					    	em{
+					    		font-style:normal;
+					    		height: 19px;
+							    text-overflow: clip;
+							    display: block;
+							    overflow: hidden;
+					    		color: #3e4141;
+					    	}
+					    	span{
+					    		font-size: 12px;
+				    		    color: #898989;
+					    	}
+					    	&:hover{
+					    		text-decoration: underline;
+					    		color:#ff6801;
+					    		em{
+					    			color:#ff6801;
+					    		}
+					    		span{
+					    			color:#ff6801;
+					    		}
+					    	}
+					    }
+				    }
+				    .price{
+				    	font: 400 17px/25px "Microsoft YaHei";
+					    color: #ff6900;
+					    margin-top: 7px;
+					    transition: all .2s linear;
+					    span{
+				    	    font: 400 12px/25px "Microsoft YaHei";
+						    color: #686c69;
+						    text-decoration: line-through;
+					    }
+				    }
+				    .btn{
+				    	position: absolute;
+					    top: 260px;
+					    left: 0;
+					    transition: all .2s linear;
+					    a{
+					    	background: url(../../icon/addcar.jpg) no-repeat center;
+					    	display: block;
+					    	width: 168px;
+							height: 33px;
+					    }
+				    }
+		    		&:hover{
+				    	border-color: #f8f8f6;
+				    	.pic{
+				    		margin-top: 7px;
+				    	}
+				    	.name{
+				    		margin-top: 7px;
+				    	}
+				    	.price{
+				    		margin-top: 7px;
+				    	}
+				    	.btn{
+				    		top:227px;
+				    	}
+		   			}
+	    		}
+			    
+	    	}
+		}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
