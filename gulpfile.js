@@ -17,13 +17,13 @@ gulp.task("copyHtml",function(){
 
 //拷贝img文件夹
 gulp.task("copyImg",function(){
-	return gulp.src(["./img/*.jpg","./img/*.png","./img/*.webp","./img/*.gif"])
+	return gulp.src("img/*.{jpg,png,gif,webp}")
 	.pipe(gulp.dest("D:/localhost/benlailife/img/"));
 });
 
 //拷贝icon文件夹
 gulp.task("copyIcon",function(){
-	return gulp.src(["./icon/*.jpg","./icon/*.png","./icon/*.gif"])
+	return gulp.src("icon/*.{jpg,png,gif,webp}")
 	.pipe(gulp.dest("D:/localhost/benlailife/icon/"));
 });
 
@@ -44,9 +44,7 @@ gulp.task('minifyJs',function(){
 	.pipe(gulp.dest('D:/localhost/benlailife/src/js'));
 })
 
-//所有任务
-
-
+//监听所有任务
 
 gulp.task('default',function(){
 	

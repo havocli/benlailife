@@ -1,0 +1,148 @@
+@import 'common';
+
+
+.login_div{
+	width:1200px;
+	margin:0 auto;
+	overflow: hidden;
+	.login{
+	    width: 400px;
+	    float: left;
+	    border: 1px solid #ddd;
+	    margin-bottom: 50px;
+	    padding:30px 30px 0;
+	    min-height: 388px;
+	    h3{
+	    	padding-left: 45px;
+	    	background: url(../../icon/login-person.jpg) no-repeat 5px center;
+	    	font:400 18px/40px '微软雅黑';
+	    	color:#323431;
+	    	margin-bottom: 30px;
+	    }
+	    .input_box{
+		    width: 398px;
+		    border: 1px solid #ddd;
+		    margin-bottom: 30px;
+		    padding: 7px 0;
+		    position: relative;
+		    z-index: 0;
+		    float:left;
+		    .true_ico{
+		    	position: absolute;
+			    top: 8px;
+			    right: 10px;
+			    width: 25px;
+			    height: 25px;
+			    background: url(../../icon/login_true.jpg) no-repeat;
+		    }
+		    .false_ico{
+			    background: url(../../icon/login_false.jpg) no-repeat;
+		    }
+
+		    p{
+	    	    float: left;
+			    width: 100px;
+			    text-align: center;
+			    border-right: 1px solid #ddd;
+			    font: 400 14px/28px "Microsoft YaHei";
+			    margin-right: 10px;
+		    }
+		    input{
+	    	    font: 400 14px/28px "Microsoft YaHei";
+			    width: 240px;
+			    height: 28px;
+			    border: 0;
+			    outline: none;
+			    color: #333;
+		    }
+		    .prompt{
+		    	position: absolute;
+			    top: -30px;
+			    left: 0;
+			    line-height: 30px;
+			    color: #ff6900;
+		    }
+
+		    // .access{
+		    // 	position: absolute;
+			   //  top: -30px;
+			   //  left: 0;
+			   //  line-height: 30px;
+			   //  color: #ff6900;
+		    // }
+	    }
+
+	    .choose{
+	    	float:left;
+	    	font: 400 14px/20px "Microsoft YaHei";
+		    margin-bottom: 20px;
+		    input{
+	    	    float: left;
+			    margin: 4px 8px 0 0;
+		    }
+		    a{
+		    	color: #8ab700;
+			    margin-left: 5px;
+			    &:hover{
+			    	text-decoration: underline;
+			    }
+		    }
+	    }
+	    .login_btn{
+	    	a{
+    		    float: left;
+			    width: 100%;
+			    text-align: center;
+			    font: 400 24px/58px "Microsoft YaHei";
+			    color: #fff;
+			    background-color: #ff6900;
+			    &:hover{
+				    opacity: .8;
+			    }
+	    	}
+	    }
+	    .word{
+	    	float: left;
+		    width: 100%;
+		    text-align: right;
+		    font: 400 14px/35px "Microsoft YaHei";
+		    padding-bottom: 75px;
+		    a{
+	    	    color: #8ab700;
+			    margin-left: 5px;
+			    &:hover{
+			    	text-decoration: underline;
+			    }
+		    }
+	    }
+
+	    dl{
+		    float: left;
+		    width: 400px;
+		    padding-bottom: 10px;
+		    dt{
+	    	    font: 400 14px/50px "Microsoft YaHei";
+		    }
+		    dd{
+		    	a{
+		    		float: left;
+	    		    margin: 0 10px 10px 0;
+	    		    font: 400 12px/30px "宋体";
+    				color: #666;
+				    padding: 0 6px 0 6px;
+				    height: 30px;
+				    border: 1px solid #eaeaea;
+				    background:#fbfbfb;
+				    text-align: center;
+				    img{
+						margin-right: 6px;
+				    }
+		    	}
+		    }
+	    }
+	}
+
+	.login_bg{
+		float: right;
+	}
+}
