@@ -1,5 +1,16 @@
 $(function(){
 	$('.headers').load('public.html .header',function(){
+		//如果存在cookie,写入网页
+		if($.cookie('username') && $.cookie('username') !=='null'){
+			$('.head_t1').find('dt').css('display','none').next().css('display','block').find('.f1').html($.cookie('username'));
+		}
+		
+		$('#check_out').click(function(){
+			$('.head_t1').find('dt').css('display','block').next().css('display','none');
+			$.cookie('username',null);
+			console.log(($.cookie('username')));
+		})
+
 		// 失去焦点
 		$('#search').focus(function(){
 			console.log(1);

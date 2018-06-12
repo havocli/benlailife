@@ -27,6 +27,12 @@ gulp.task("copyIcon",function(){
 	.pipe(gulp.dest("D:/localhost/benlailife/icon/"));
 });
 
+//拷贝PHP文件夹
+gulp.task("copyPhp",function(){
+	return gulp.src("./src/php/*.php")
+	.pipe(gulp.dest("D:/localhost/benlailife/src/php"))
+})
+
 //编译scss,压缩css
 gulp.task('minifyCss',function(){
 	return gulp.src('./src/style/*.scss')
@@ -36,7 +42,7 @@ gulp.task('minifyCss',function(){
 })
 
 
-//转译js,压缩js
+//转译js为ES5,压缩js
 gulp.task('minifyJs',function(){
 	return gulp.src('./src/js/*.js')
 	.pipe(babel())
@@ -51,6 +57,7 @@ gulp.task('default',function(){
 	gulp.watch("*.html",["copyHtml"]);
 	gulp.watch("img/*.{jpg,png,gif,webp}",["copyImg"]);
 	gulp.watch("icon/*.{jpg,png,gif,webp}",["copyIcon"]);
+	gulp.watch('./src/php/*.php',["copyPhp"]);
 	gulp.watch('./src/js/*.js',["minifyJs"]);
 	gulp.watch('./src/style/*.scss',["minifyCss"]);
 })

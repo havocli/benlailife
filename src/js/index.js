@@ -109,7 +109,7 @@ $('.btnL').click(function(){
 	if(index <0){
 		index = len-1;
 	}
-	$('.bg li').eq(index).fadeIn().siblings().fadeOut();
+	$('.bg li').eq(index).fadeIn(1000).siblings().fadeOut(1000);
 	$('.bullet li').eq(index).addClass('bullet_active').siblings().removeClass('bullet_active');
 
 })
@@ -130,7 +130,7 @@ $('.bullet li').each(function(k,v){
 	$(v).mouseover(function(){
 		$(v).addClass('bullet_active').siblings().removeClass('bullet_active');
 		index = k;
-		$('.banner li').eq(index).fadeIn().siblings().fadeOut();
+		$('.banner li').eq(index).fadeIn(1000).siblings().fadeOut(1000);
 	})
 });
 
@@ -151,6 +151,6 @@ function move(){
 	if(index >= len){
 		index = 0;
 	}
-	$('.bg li').eq(index).fadeIn().siblings().fadeOut();
+	$('.bg li').eq(index).fadeIn(1000).siblings().fadeOut(1000);
 	$('.bullet li').eq(index).addClass('bullet_active').siblings().removeClass('bullet_active');
 }
