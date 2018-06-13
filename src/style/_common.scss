@@ -1,7 +1,7 @@
 body,div,p,ul,ol,li,dl,dt,dd,form,h1,h2,h3,h4,h5,h6,table,tr,td,hr,fieldset,img,input,textarea{
 	margin:0;
 	padding:0;
-	}
+}
 a{
 	text-decoration:none;
 	cursor: pointer;
@@ -33,7 +33,7 @@ img{
     position: fixed;
     z-index: 30;
     #go_top{
-    	// display: none;
+    	display: none;
 		@extend .top_basic;
 	    width: 44px;
 	    height: 30px;
@@ -474,7 +474,7 @@ img{
 			    right: 0;
 			    width: 288px;
 			    display: none;
-			    .login{
+			    .logins{
 			    	border-bottom:1px solid #e8e8e8;
 			    	padding-left:15px;
 			    	line-height:48px;

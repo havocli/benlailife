@@ -1,3 +1,45 @@
+//滑动验证
+
+$('.slide_btn').mousedown(function(e){
+	let boo = false;
+	let l = e.pageX -$('.slide').offset().left;
+	// console.log()
+	$(document).mousemove((e) => {
+		let left = e.pageX - $('.slide').offset().left - l;
+		//判断边界
+		if(left >=($('.slide').width() - $(this).width())){
+			left = $('.slide').width() - $(this).width();
+			$('.slide_word').html('验证通过！');
+			$(this).find('a').css('background','url(icon/login_true.jpg) 14px center no-repeat #fff');
+			boo = true;
+		}
+		if(left <0){
+			left = 0;
+		}
+		$(this).css('left',left);
+		$('.slide_background').width(left);
+	})
+	$(document).mouseup(()=>{
+		if(boo == false){
+			
+			$(this).css('left',0);
+			$('.slide_background').width(0);
+		}
+		$(document).unbind();
+	})
+
+	return false;
+})
+
+
+
+
+
+
+
+
+
+
 //聚焦
 $('#account').focus(function () {
 	var value = $('#account').val();
@@ -86,23 +128,11 @@ $('#confirm_p').blur(function () {
 
 
 
-// var num = $('.number').html();
-// var	va = $('#account').val();
-
-// var	ver = $('.vertify').html();
-// var	cod = $('#smsCode').val();
-
-// var	ass = $('.access').html();
-// var	pas = $('#password').val();
-
-// var	co  = $('.confirm').html();
-// var	cof = $('#confirm_p').val();
-
 
 //注册
 $('#register').click(function(){
 	//前端校验是否全部符合条件
-	if($('.number').html() == ''&& $('#account').val() !== '请输入手机号' && $('.vertify').html() =='' && $('#smsCode').val() !=='请输入验证码' && $('.access').html() == ''&& $('#password').val() !==''&& $('#confirm_p').val() !== '' && $('#password').val() == $('#confirm_p').val() && $('#read').prop('checked')==true){
+	if($('.number').html() == ''&& $('#account').val() !== '请输入手机号' && $('.vertify').html() =='' && $('#smsCode').val() !=='请输入验证码' && $('.access').html() == ''&& $('#password').val() !==''&& $('#confirm_p').val() !== '' && $('#password').val() == $('#confirm_p').val() && $('#read').prop('checked')==true && $('.slide_word').html() == '验证通过！'){
 		console.log(1);
 		//发送后端校验手机号是否存在
 		$.getJSON('./src/php/vertify.php',{usertel:$('#account').val()},function(data){
@@ -114,7 +144,7 @@ $('#register').click(function(){
 			//手机号没有注册，发送后端，写入数据库
 				$.getJSON('./src/php/insert.php',{usertel:$('#account').val(),password:$('#password').val()},function(data){
 					//插入成功，跳转致首页面
-					if(data==1){
+					if(data==1){ 
 						//存入cookie
 						$.cookie('username',$('#account').val());
 
@@ -143,6 +173,8 @@ $('#register').click(function(){
 		$('.access').html('密码须为8-16位字母,数字,半角符号中至少两种组合');
 
 	}else if($('#read').prop('checked')==false){
+
+	}else if($('.slide_word').html() !== '验证通过！'){
 
 	}else{
 

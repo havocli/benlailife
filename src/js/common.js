@@ -1,12 +1,14 @@
-$(function(){
+// $(function(){
 	$('.headers').load('public.html .header',function(){
 		//如果存在cookie,写入网页
 		if($.cookie('username') && $.cookie('username') !=='null'){
 			$('.head_t1').find('dt').css('display','none').next().css('display','block').find('.f1').html($.cookie('username'));
+			$('.logins').html('您好，<a href="javascript:;">'+$.cookie('username')+'</a>');
 		}
 		
 		$('#check_out').click(function(){
 			$('.head_t1').find('dt').css('display','block').next().css('display','none');
+			$('.logins').html('您好，请<a href="javascript:;">[登录]</a>');
 			$.cookie('username',null);
 			console.log(($.cookie('username')));
 		})
@@ -73,4 +75,4 @@ $(function(){
 $('.footers').load('public.html .footer');
 
 
-})
+// })

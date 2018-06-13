@@ -1,0 +1,244 @@
+@charset "utf-8";
+body,div,p,ol,ul,li,dl,dt,dd,form,table,tr,td,hr,h1,h2,h3,h4,h5,h6,fieldset,img,input,figure{
+	margin:0;
+	padding:0;
+}
+html{
+	font-size: 26.67vw;
+}
+html,body{
+	height: 100%;
+}
+body{
+	font-family: "Microsoft Yahei",Arial;
+	background: #f2f2f2;
+	// display: -webkit-flex;
+	// -webkit-flex-direction:column;
+}
+a{
+	text-decoration: none;
+}
+ul,ol{
+	list-style: none;
+}
+img{
+	border:none;
+	display: block;
+}
+
+//header
+
+header{
+	background: #fff;
+	margin-bottom: 2px;
+	.head_top{
+		display: -webkit-flex;
+		-webkit-justify-content:space-between;
+		padding:0 0.1rem;
+		height:0.43rem;
+		border-bottom: 1px solid #eee;
+		a{
+			line-height: 0.43rem;
+		}
+		a:nth-child(1){
+			img{
+				height:0.18rem;
+				width:0.1rem;
+				padding-top: 0.13rem;
+			}
+		}
+		a:nth-child(2){
+			color:#333333;
+			font-size: 0.18rem;
+		}
+		a:nth-child(3){
+			color:#999999;
+			font-size: 0.12rem;
+		}
+	}
+	.head_bot{
+		padding:0 0.08rem;
+		height:0.43rem;
+		border-bottom: 1px solid #eee;
+		a{
+			margin-right: 0.1rem;
+			line-height: 0.43rem;
+			font-size: 0.12rem;
+			float: left;
+			color:#444444;
+			float: left;
+			img{
+				height:0.16rem;
+				width:0.18rem;
+				padding-top: 0.13rem;
+				
+			}
+		}
+	}
+}
+
+//section
+
+.content{
+	.info{
+		margin-bottom: 0.1rem;
+		background: #fff;
+		display: -webkit-flex;
+		.info_left{
+			display: -webkit-flex;
+			-webkit-justify-content:center;
+			-webkit-align-items: center;
+			width:0.4rem;
+			a{
+				width:0.2rem;
+				height:0.2rem;
+				border: 1px solid transparent;
+				img{
+					height: 0.2rem;
+					width:0.2rem;
+				}
+			}
+		}
+		.info_right{
+			flex:1;
+			display: -webkit-flex;
+			padding:0.1rem 0.1rem 0.1rem 0;
+			position: relative;
+			img{
+				height:0.9rem;
+				width:0.9rem;
+			}
+			.word{
+				margin-left: 0.1rem;
+				display: -webkit-flex;
+				-webkit-flex-direction:column;
+				-webkit-justify-content:space-between;
+				h3{
+					font-size: 0.12rem;
+					line-height: 0.2rem;
+				}
+				p{
+					font-weight: 500;
+					font-size: 0.12rem;
+					color:orange;
+					line-height: 0.2rem;
+					span{
+						font-size: 0.14rem;
+					}
+				}
+
+			}
+			.num{
+				border-radius: 1px;
+				position: absolute;
+				left:2.47rem;
+				top:0.75rem;
+				width:0.76rem;
+				height:0.24rem;
+				border: 1px solid #ddd;
+				a{
+					float:left;
+					width:0.23rem;
+					line-height:0.23rem;
+					color: #333333;
+					text-align: center;
+					font-size: 0.14rem;
+				}
+				#min{
+					border-right: 0.01rem solid #f2f2f2;
+				}
+				#add{
+					border-left: 0.01rem solid #f2f2f2;
+				}
+				input{
+					float: left;
+					color:black;
+					border:none;
+					outline: none;
+					text-align: center;
+					line-height: 0.24rem;
+					width:0.28rem;
+					font-size: 0.12rem;
+				}
+			}
+		}
+	}
+	.hot{
+		height:0.23rem;
+		padding-top:0.22rem;
+		.line{
+			height:0.01rem;
+			width:1.76rem;
+			background: #c6c6c6;
+			margin:0 auto;
+			position: relative;
+			&:after{
+				content:'优惠推荐';
+				display: block;
+				width:0.96rem;
+				font-size: 0.12rem;
+				line-height: 0.16rem;
+				color:#999999;
+				background: url(../../icon/mHand.jpg) no-repeat 0.09rem center;
+				text-indent: 0.3rem;
+				position: absolute;
+				top:-0.08rem;
+				left:0.4rem;
+				background-color: #f2f2f2;;
+			}
+		}
+	}
+	.goods{
+		display: -webkit-flex;
+		-webkit-flex-wrap:wrap;
+		.goodlist{
+			width:50%;
+			box-sizing:border-box;
+			background: #f2f2f2;
+			margin-bottom: 0.05rem;
+			.good{
+				background: #fff;
+				img{
+					height:1.85rem;
+					width:1.85rem;
+				}
+				.words{
+					padding:0.1rem;
+					display: -webkit-flex;
+					-webkit-flex-direction:column;
+					-webkit-justify-content:space-between;
+					h3{
+						line-height: 0.16rem;
+						font-size: 0.12rem;
+						color:black;
+					}
+					p{
+						color:#999999;
+						line-height: 0.16rem;
+						font-size: 0.12rem;
+					}
+					.good_price{
+						display: -webkit-flex;
+						-webkit-justify-content:space-between;
+						a{
+							color:orange;
+							font-size:0.14rem;
+							line-height: 0.2rem;
+							span{
+								color:#999999;
+								font-size: 0.12rem;
+								text-decoration: line-through;
+							}
+						}
+						img{
+							height:0.21rem;
+							width:0.25rem;
+
+						}
+					}
+
+				}
+			}
+		}
+	}
+}
